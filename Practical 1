@@ -1,0 +1,34 @@
+az vm create \
+  --resource-group [sandbox resource group name] \
+  --name Web-Svr \
+  --public-ip-sku Standard \
+  --image Ubuntu2204 \
+  --admin-username itumeleng \
+  --generate-ssh-keys
+$cd /var
+$cd ...
+$ssh itumeleng@public-Address
+$sudo apt-get update
+$sudo apt-get -y Install nginx
+$systeml ls-active nginx
+$systeml status nginx
+$sudo systeml start nginx
+$sudo mkdir /var/www/html/labs
+$ls -ld /var/www/html/labs
+$sudo chown itumeleng:root /var/www/html/labs
+$ln -s /var/www/labs html
+$ls -l
+$cd html
+$touch index.html
+$nano index.html
+$cat index.html
+$localhost/labs/
+$mkdir bin
+$cd bin
+$touch websvr_config_Script.bash
+$ls -l
+$chmod u+x websvr_config_Script.bash
+$ls -l
+$./Websvr_config_Script.bash
+$nano
+$./Websvr_config_Script.bash
